@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.dao.LogMapper">
+  <resultMap id="BaseResultMap" type="com.example.model.Log">
+    <id column="logId" jdbcType="INTEGER" property="logid" />
+    <result column="deviceId" jdbcType="INTEGER" property="deviceid" />
+    <result column="time" jdbcType="TIMESTAMP" property="time" />
+    <result column="location" jdbcType="VARCHAR" property="location" />
+    <result column="typeId" jdbcType="INTEGER" property="typeid" />
+    <result column="rId" jdbcType="INTEGER" property="rid" />
+    <result column="level" jdbcType="INTEGER" property="level" />
+    <result column="temperature" jdbcType="DOUBLE" property="temperature" />
+    <result column="humidity" jdbcType="DOUBLE" property="humidity" />
+    <result column="is_close" jdbcType="INTEGER" property="isClose" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    logId, deviceId, time, location, typeId, rId, level, temperature, humidity, is_close
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from log
+    where logId = #{logid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from log
+    where logId = #{logid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.example.model.Log">
+    insert into log (logId, deviceId, time, 
+      location, typeId, rId, 
+      level, temperature, humidity, 
+      is_close)
+    values (#{logid,jdbcType=INTEGER}, #{deviceid,jdbcType=INTEGER}, #{time,jdbcType=TIMESTAMP}, 
+      #{location,jdbcType=VARCHAR}, #{typeid,jdbcType=INTEGER}, #{rid,jdbcType=INTEGER}, 
+      #{level,jdbcType=INTEGER}, #{temperature,jdbcType=DOUBLE}, #{humidity,jdbcType=DOUBLE}, 
+      #{isClose,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.model.Log">
+    insert into log
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="logid != null">
+        logId,
+      </if>
+      <if test="deviceid != null">
+        deviceId,
+      </if>
+      <if test="time != null">
+        time,
+      </if>
+      <if test="location != null">
+        location,
+      </if>
+      <if test="typeid != null">
+        typeId,
+      </if>
+      <if test="rid != null">
+        rId,
+      </if>
+      <if test="level != null">
+        level,
+      </if>
+      <if test="temperature != null">
+        temperature,
+      </if>
+      <if test="humidity != null">
+        humidity,
+      </if>
+      <if test="isClose != null">
+        is_close,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="logid != null">
+        #{logid,jdbcType=INTEGER},
+      </if>
+      <if test="deviceid != null">
+        #{deviceid,jdbcType=INTEGER},
+      </if>
+      <if test="time != null">
+        #{time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="location != null">
+        #{location,jdbcType=VARCHAR},
+      </if>
+      <if test="typeid != null">
+        #{typeid,jdbcType=INTEGER},
+      </if>
+      <if test="rid != null">
+        #{rid,jdbcType=INTEGER},
+      </if>
+      <if test="level != null">
+        #{level,jdbcType=INTEGER},
+      </if>
+      <if test="temperature != null">
+        #{temperature,jdbcType=DOUBLE},
+      </if>
+      <if test="humidity != null">
+        #{humidity,jdbcType=DOUBLE},
+      </if>
+      <if test="isClose != null">
+        #{isClose,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.model.Log">
+    update log
+    <set>
+      <if test="deviceid != null">
+        deviceId = #{deviceid,jdbcType=INTEGER},
+      </if>
+      <if test="time != null">
+        time = #{time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="location != null">
+        location = #{location,jdbcType=VARCHAR},
+      </if>
+      <if test="typeid != null">
+        typeId = #{typeid,jdbcType=INTEGER},
+      </if>
+      <if test="rid != null">
+        rId = #{rid,jdbcType=INTEGER},
+      </if>
+      <if test="level != null">
+        level = #{level,jdbcType=INTEGER},
+      </if>
+      <if test="temperature != null">
+        temperature = #{temperature,jdbcType=DOUBLE},
+      </if>
+      <if test="humidity != null">
+        humidity = #{humidity,jdbcType=DOUBLE},
+      </if>
+      <if test="isClose != null">
+        is_close = #{isClose,jdbcType=INTEGER},
+      </if>
+    </set>
+    where logId = #{logid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.model.Log">
+    update log
+    set deviceId = #{deviceid,jdbcType=INTEGER},
+      time = #{time,jdbcType=TIMESTAMP},
+      location = #{location,jdbcType=VARCHAR},
+      typeId = #{typeid,jdbcType=INTEGER},
+      rId = #{rid,jdbcType=INTEGER},
+      level = #{level,jdbcType=INTEGER},
+      temperature = #{temperature,jdbcType=DOUBLE},
+      humidity = #{humidity,jdbcType=DOUBLE},
+      is_close = #{isClose,jdbcType=INTEGER}
+    where logId = #{logid,jdbcType=INTEGER}
+  </update>
+
+  <select id="selectAll" resultMap="BaseResultMap">
+    select * from `log` where 1=1
+    <if test="rId != null and rId != ''">
+      and rId=#{rId}
+    </if>
+    <if test="typeId != null">
+      and typeId=#{typeId}
+    </if>
+    <if test="deviceId != null and deviceId != ''">
+      and deviceId=#{deviceId}
+    </if>
+    <if test="startTime != null and startTime != ''">
+      and date_format(`time`, '%Y-%m-%d %H:%i:%S')<![CDATA[ >= ]]>date_format(#{startTime}, '%Y-%m-%d 00:00:00')
+    </if>
+    <if test="endTime != null and endTime != ''">
+      and date_format(`time`, '%Y-%m-%d %H:%i:%S')<![CDATA[ <= ]]>date_format(#{endTime}, '%Y-%m-%d 23:59:59')
+    </if>
+  </select>
+
+  <select id="getCountByDate" resultType="java.util.Map">
+    select count(*) c,date_format(time,'%Y-%m-%d') `date` from log where typeId=#{typeId}
+    <if test="rId!=null">
+      and rId=#{rId}
+    </if>
+    <if test="startTime != null and startTime != ''">
+      and date_format(`time`, '%Y-%m-%d %H:%i:%S')<![CDATA[ >= ]]>date_format(#{startTime}, '%Y-%m-%d 00:00:00')
+    </if>
+    <if test="endTime != null and endTime != ''">
+      and date_format(`time`, '%Y-%m-%d %H:%i:%S')<![CDATA[ <= ]]>date_format(#{endTime}, '%Y-%m-%d 23:59:59')
+    </if>
+    group by date_format(time,'%Y-%m-%d')
+  </select>
+
+  <select id="getDateValueByHour" resultType="java.util.Map">
+    select hour(`time`) h,temperature,humidity from log
+    where typeId=#{typeId} and date_format(`time`,'%Y-%m-%d') = #{date}
+    <if test="rId!=null">
+      and rId=#{rId}
+    </if>
+    group by hour(`time`) order by hour(`time`)
+  </select>
+</mapper>

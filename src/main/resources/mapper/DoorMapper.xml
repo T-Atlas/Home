@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.dao.DoorMapper">
+  <resultMap id="BaseResultMap" type="com.example.model.Door">
+    <id column="deviceId" jdbcType="INTEGER" property="deviceid" />
+    <result column="is_close" jdbcType="INTEGER" property="isClose" />
+    <result column="is_lock" jdbcType="INTEGER" property="isLock" />
+    <result column="location" jdbcType="VARCHAR" property="location" />
+    <result column="typeId" jdbcType="INTEGER" property="typeid" />
+    <result column="rId" jdbcType="INTEGER" property="rid" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    deviceId, is_close, is_lock, location, typeId, rId
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from door
+    where deviceId = #{deviceid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from door
+    where deviceId = #{deviceid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.example.model.Door">
+    insert into door (deviceId, is_close, is_lock, 
+      location, typeId, rId
+      )
+    values (#{deviceid,jdbcType=INTEGER}, #{isClose,jdbcType=INTEGER}, #{isLock,jdbcType=INTEGER}, 
+      #{location,jdbcType=VARCHAR}, #{typeid,jdbcType=INTEGER}, #{rid,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.model.Door">
+    insert into door
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="deviceid != null">
+        deviceId,
+      </if>
+      <if test="isClose != null">
+        is_close,
+      </if>
+      <if test="isLock != null">
+        is_lock,
+      </if>
+      <if test="location != null">
+        location,
+      </if>
+      <if test="typeid != null">
+        typeId,
+      </if>
+      <if test="rid != null">
+        rId,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="deviceid != null">
+        #{deviceid,jdbcType=INTEGER},
+      </if>
+      <if test="isClose != null">
+        #{isClose,jdbcType=INTEGER},
+      </if>
+      <if test="isLock != null">
+        #{isLock,jdbcType=INTEGER},
+      </if>
+      <if test="location != null">
+        #{location,jdbcType=VARCHAR},
+      </if>
+      <if test="typeid != null">
+        #{typeid,jdbcType=INTEGER},
+      </if>
+      <if test="rid != null">
+        #{rid,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.model.Door">
+    update door
+    <set>
+      <if test="isClose != null">
+        is_close = #{isClose,jdbcType=INTEGER},
+      </if>
+      <if test="isLock != null">
+        is_lock = #{isLock,jdbcType=INTEGER},
+      </if>
+      <if test="location != null">
+        location = #{location,jdbcType=VARCHAR},
+      </if>
+      <if test="typeid != null">
+        typeId = #{typeid,jdbcType=INTEGER},
+      </if>
+      <if test="rid != null">
+        rId = #{rid,jdbcType=INTEGER},
+      </if>
+    </set>
+    where deviceId = #{deviceid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.model.Door">
+    update door
+    set is_close = #{isClose,jdbcType=INTEGER},
+      is_lock = #{isLock,jdbcType=INTEGER},
+      location = #{location,jdbcType=VARCHAR},
+      typeId = #{typeid,jdbcType=INTEGER},
+      rId = #{rid,jdbcType=INTEGER}
+    where deviceId = #{deviceid,jdbcType=INTEGER}
+  </update>
+
+  <select id="selectAll" resultMap="BaseResultMap">
+    select * from `door` where 1=1
+    <if test="rid!=null">
+      and rId=#{rid}
+    </if>
+    <if test="keyword != null and keyword != ''">
+      and (rId like '%${keyword}%')
+    </if>
+  </select>
+
+  <select id="getTopRoomCount" resultType="java.util.Map">
+    select count(*) c,rId from door group by rId order by count(*) desc limit 10
+  </select>
+</mapper>
