@@ -22,6 +22,8 @@ public interface FactoryMapper {
 
     int updateByPrimaryKeySelective(Factory record);
 
+    int updateByPrimaryKeyWithBLOBs(Factory record);
+
     int updateByPrimaryKey(Factory record);
 
     List<Factory> selectAll(@Param("keyword") String keyword);

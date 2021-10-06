@@ -114,15 +114,15 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">Status</label>
                 <div class="layui-input-block">
-                    <input type="radio" name="is_close" value="1" title="Open" {{ d.isClose=='1'?'checked':'' }}>
-                    <input type="radio" name="is_close" value="0" title="Close" {{ d.isClose=='0'?'checked':'' }}>
+                    <input type="radio" name="is_close" value="0" title="Open" {{ d.isClose=='0'?'checked':'' }}>
+                    <input type="radio" name="is_close" value="1" title="Close" {{ d.isClose=='1'?'checked':'' }}>
                 </div>
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label">Locked</label>
                 <div class="layui-input-block">
-                    <input type="radio" name="is_lock" value="1" title="Locked" {{ d.isLock=='1'?'checked':'' }}>
-                    <input type="radio" name="is_lock" value="0" title="Unlocked" {{ d.isLock=='0'?'checked':'' }}>
+                    <input type="radio" name="is_lock" value="0" title="Locked" {{ d.isLock=='0'?'checked':'' }}>
+                    <input type="radio" name="is_lock" value="1" title="Unlocked" {{ d.isLock=='1'?'checked':'' }}>
                 </div>
             </div>
             <c:if test="${sysUser.getUtype()==1}">
@@ -162,8 +162,8 @@
     layui.use(['form', 'layer', 'laytpl', 'laypage'], function () {
         const layer = layui.layer, laytpl = layui.laytpl, laypage = layui.laypage, form = layui.form, defaultValue = {
             deviceid: '',
-            isLock: 1,
-            isClose: 1,
+            isLock: 0,
+            isClose: 0,
             location: '',
             typeid: 1,
             rid: ''

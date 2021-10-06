@@ -19,15 +19,15 @@
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from log
+    from myhome.log
     where logId = #{logid,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from log
+    delete from myhome.log
     where logId = #{logid,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.example.model.Log">
-    insert into log (logId, deviceId, time, 
+    insert into myhome.log (logId, deviceId, time,
       location, typeId, rId, 
       level, temperature, humidity, 
       is_close)
@@ -37,7 +37,7 @@
       #{isClose,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.example.model.Log">
-    insert into log
+    insert into myhome.log
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="logid != null">
         logId,
@@ -104,7 +104,7 @@
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.example.model.Log">
-    update log
+    update myhome.log
     <set>
       <if test="deviceid != null">
         deviceId = #{deviceid,jdbcType=INTEGER},
@@ -137,7 +137,7 @@
     where logId = #{logid,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.example.model.Log">
-    update log
+    update myhome.log
     set deviceId = #{deviceid,jdbcType=INTEGER},
       time = #{time,jdbcType=TIMESTAMP},
       location = #{location,jdbcType=VARCHAR},
@@ -151,7 +151,7 @@
   </update>
 
   <select id="selectAll" resultMap="BaseResultMap">
-    select * from `log` where 1=1
+    select * from myhome.log where 1=1
     <if test="rId != null and rId != ''">
       and rId=#{rId}
     </if>
@@ -170,7 +170,7 @@
   </select>
 
   <select id="getCountByDate" resultType="java.util.Map">
-    select count(*) c,date_format(time,'%Y-%m-%d') `date` from log where typeId=#{typeId}
+    select count(*) c,date_format(time,'%Y-%m-%d') `date` from myhome.log where typeId=#{typeId}
     <if test="rId!=null">
       and rId=#{rId}
     </if>
@@ -184,7 +184,7 @@
   </select>
 
   <select id="getDateValueByHour" resultType="java.util.Map">
-    select hour(`time`) h,temperature,humidity from log
+    select hour(`time`) h,temperature,humidity from myhome.log
     where typeId=#{typeId} and date_format(`time`,'%Y-%m-%d') = #{date}
     <if test="rId!=null">
       and rId=#{rId}

@@ -12,7 +12,7 @@ $("#registerBtn").click(function () {
         return false;
     } else {
         if (!isNum(user_id)) {
-            $("#valid").html("User ID 格式不正确!");
+            $("#valid").html("User ID format is incorrect!");
             return false;
         }
         if (!user_name) {
@@ -28,7 +28,7 @@ $("#registerBtn").click(function () {
                     return false;
                 } else {
                     if (!isNum(age)) {
-                        $("#valid").html("Age 格式不正确!");
+                        $("#valid").html("Age format is incorrect!");
                         return false;
                     }
                     if (!user_email) {
@@ -36,7 +36,7 @@ $("#registerBtn").click(function () {
                         return false;
                     } else {
                         if (!isEmail(user_email)) {
-                            $("#valid").html("E-mail 格式不正确!");
+                            $("#valid").html("E-mail format is incorrect!");
                             return false;
                         }
                         if (!user_tel) {
@@ -44,7 +44,7 @@ $("#registerBtn").click(function () {
                             return false;
                         } else {
                             if (!isTel(user_tel) && !isPhone(user_tel)) {
-                                $("#valid").html("Tel 格式不正确!");
+                                $("#valid").html("Tel format is incorrect!");
                                 return false;
                             }
                             if (!user_room_id) {

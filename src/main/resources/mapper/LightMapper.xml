@@ -18,15 +18,15 @@
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from light
+    from myhome.light
     where deviceId = #{deviceid,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from light
+    delete from myhome.light
     where deviceId = #{deviceid,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.example.model.Light">
-    insert into light (deviceId, level, R, 
+    insert into myhome.light (deviceId, level, R,
       G, B, is_close, location, 
       typeId, rId)
     values (#{deviceid,jdbcType=INTEGER}, #{level,jdbcType=INTEGER}, #{r,jdbcType=INTEGER}, 
@@ -34,7 +34,7 @@
       #{typeid,jdbcType=INTEGER}, #{rid,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.example.model.Light">
-    insert into light
+    insert into myhome.light
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="deviceid != null">
         deviceId,
@@ -95,7 +95,7 @@
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.example.model.Light">
-    update light
+    update myhome.light
     <set>
       <if test="level != null">
         level = #{level,jdbcType=INTEGER},
@@ -125,7 +125,7 @@
     where deviceId = #{deviceid,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.example.model.Light">
-    update light
+    update myhome.light
     set level = #{level,jdbcType=INTEGER},
       R = #{r,jdbcType=INTEGER},
       G = #{g,jdbcType=INTEGER},
@@ -138,7 +138,7 @@
   </update>
 
   <select id="selectAll" resultMap="BaseResultMap">
-    select * from `light` where 1=1
+    select * from myhome.light where 1=1
     <if test="rid!=null">
       and rId=#{rid}
     </if>
@@ -148,6 +148,6 @@
   </select>
 
   <select id="getTopRoomCount" resultType="java.util.Map">
-    select count(*) c,rId from light group by rId order by count(*) desc limit 10
+    select count(*) c,rId from myhome.light group by rId order by count(*) desc limit 10
   </select>
 </mapper>

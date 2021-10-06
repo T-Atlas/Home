@@ -270,7 +270,7 @@
                 const id = $(this).parents('tr:first').data('id');
                 layer.confirm('Are you sure you want to delete it?', {btn: ['YES', 'NO'], icon: 3}, function () {
                     ajax({
-                        url: "../user/del",
+                        url: "../fans/del",
                         data: {id: id},
                         success: function (res) {
                             if (res.code > 0) {

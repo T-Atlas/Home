@@ -52,15 +52,15 @@ public class Rt implements Serializable {
     }
 
     public static Rt success() {
-        return new Rt(1, "操作成功", null);
+        return new Rt(1, "Operation successful", null);
     }
 
     public static Rt success(Object data) {
-        return new Rt(1, "操作成功", data);
+        return new Rt(1, "Operation successful", data);
     }
 
     public static Rt fail() {
-        return new Rt(-1, "操作失败", null);
+        return new Rt(-1, "Operation failed", null);
     }
 
     public static Rt fail(String msg) {

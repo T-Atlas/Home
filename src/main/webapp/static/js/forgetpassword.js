@@ -9,7 +9,7 @@ $("#sendBtn").click(function (){
         return false;
     }else {
         if (!isNum(user_id)) {
-            $("#valid").html("User ID 格式不正确!");
+            $("#valid").html("User ID format is incorrect!");
             return false;
         }
         if (!user_name) {
@@ -21,7 +21,7 @@ $("#sendBtn").click(function (){
                 return false;
             }else{
                 if (!isTel(user_TEL) && !isPhone(user_TEL)) {
-                    $("#valid").html("Tel 格式不正确!");
+                    $("#valid").html("Tel format is incorrect!");
                     return false;
                 }
                 if(!user_nPassword){

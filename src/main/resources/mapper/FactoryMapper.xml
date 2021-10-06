@@ -24,17 +24,17 @@
     where typeId = #{typeid,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from factory
+    delete from myhome.factory
     where typeId = #{typeid,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.example.model.Factory">
-    insert into factory (typeId, fName, model, 
+    insert into myhome.factory (typeId, fName, model,
       instruction)
     values (#{typeid,jdbcType=INTEGER}, #{fname,jdbcType=VARCHAR}, #{model,jdbcType=INTEGER}, 
       #{instruction,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.example.model.Factory">
-    insert into factory
+    insert into myhome.factory
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="typeid != null">
         typeId,
@@ -65,7 +65,7 @@
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.example.model.Factory">
-    update factory
+    update myhome.factory
     <set>
       <if test="fname != null">
         fName = #{fname,jdbcType=VARCHAR},
@@ -80,45 +80,45 @@
     where typeId = #{typeid,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.example.model.Factory">
-    update factory
+    update myhome.factory
     set fName = #{fname,jdbcType=VARCHAR},
       model = #{model,jdbcType=INTEGER},
       instruction = #{instruction,jdbcType=LONGVARCHAR}
     where typeId = #{typeid,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.example.model.Factory">
-    update factory
+    update myhome.factory
     set fName = #{fname,jdbcType=VARCHAR},
       model = #{model,jdbcType=INTEGER}
     where typeId = #{typeid,jdbcType=INTEGER}
   </update>
 
   <select id="selectAll" resultMap="BaseResultMap">
-    select * from `factory` where 1=1
+    select * from myhome.factory where 1=1
     <if test="keyword != null and keyword != ''">
       and (fName like '%${keyword}%')
     </if>
   </select>
 
   <select id="getCountByTypeId" resultType="java.util.Map">
-    select ifnull(r.c,0) c,f.typeId,f.fName,f.model from factory f
+    select ifnull(r.c,0) c,f.typeId,f.fName,f.model from myhome.factory f
     left join (
-    select count(*) c,typeId from door where 1=1
+    select count(*) c,typeId from myhome.door where 1=1
     <if test="rid!=null">
       and rId=#{rid}
     </if>
     union
-    select count(*) c,typeId from light where 1=1
+    select count(*) c,typeId from myhome.light where 1=1
     <if test="rid!=null">
       and rId=#{rid}
     </if>
     union
-    select count(*) c,typeId from sensor where 1=1
+    select count(*) c,typeId from myhome.sensor where 1=1
     <if test="rid!=null">
       and rId=#{rid}
     </if>
     union
-    select count(*) c,typeId from fans where 1=1
+    select count(*) c,typeId from myhome.fans where 1=1
     <if test="rid!=null">
       and rId=#{rid}
     </if>

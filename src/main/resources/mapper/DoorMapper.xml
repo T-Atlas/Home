@@ -15,15 +15,15 @@
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from door
+    from myhome.door
     where deviceId = #{deviceid,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from door
+    delete from myhome.door
     where deviceId = #{deviceid,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.example.model.Door">
-    insert into door (deviceId, is_close, is_lock, 
+    insert into myhome.door (deviceId, is_close, is_lock,
       location, typeId, rId
       )
     values (#{deviceid,jdbcType=INTEGER}, #{isClose,jdbcType=INTEGER}, #{isLock,jdbcType=INTEGER}, 
@@ -31,7 +31,7 @@
       )
   </insert>
   <insert id="insertSelective" parameterType="com.example.model.Door">
-    insert into door
+    insert into myhome.door
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="deviceid != null">
         deviceId,
@@ -74,7 +74,7 @@
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.example.model.Door">
-    update door
+    update myhome.door
     <set>
       <if test="isClose != null">
         is_close = #{isClose,jdbcType=INTEGER},
@@ -95,7 +95,7 @@
     where deviceId = #{deviceid,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.example.model.Door">
-    update door
+    update myhome.door
     set is_close = #{isClose,jdbcType=INTEGER},
       is_lock = #{isLock,jdbcType=INTEGER},
       location = #{location,jdbcType=VARCHAR},
@@ -105,7 +105,7 @@
   </update>
 
   <select id="selectAll" resultMap="BaseResultMap">
-    select * from `door` where 1=1
+    select * from myhome.door where 1=1
     <if test="rid!=null">
       and rId=#{rid}
     </if>
@@ -115,6 +115,6 @@
   </select>
 
   <select id="getTopRoomCount" resultType="java.util.Map">
-    select count(*) c,rId from door group by rId order by count(*) desc limit 10
+    select count(*) c,rId from myhome.door group by rId order by count(*) desc limit 10
   </select>
 </mapper>

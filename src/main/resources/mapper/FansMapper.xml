@@ -15,15 +15,15 @@
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from fans
+    from myhome.fans
     where deviceId = #{deviceid,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from fans
+    delete from myhome.fans
     where deviceId = #{deviceid,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.example.model.Fans">
-    insert into fans (deviceId, level, is_close, 
+    insert into myhome.fans (deviceId, level, is_close,
       location, typeId, rId
       )
     values (#{deviceid,jdbcType=INTEGER}, #{level,jdbcType=INTEGER}, #{isClose,jdbcType=INTEGER}, 
@@ -31,7 +31,7 @@
       )
   </insert>
   <insert id="insertSelective" parameterType="com.example.model.Fans">
-    insert into fans
+    insert into myhome.fans
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="deviceid != null">
         deviceId,
@@ -74,7 +74,7 @@
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.example.model.Fans">
-    update fans
+    update myhome.fans
     <set>
       <if test="level != null">
         level = #{level,jdbcType=INTEGER},
@@ -95,7 +95,7 @@
     where deviceId = #{deviceid,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.example.model.Fans">
-    update fans
+    update myhome.fans
     set level = #{level,jdbcType=INTEGER},
       is_close = #{isClose,jdbcType=INTEGER},
       location = #{location,jdbcType=VARCHAR},
@@ -105,7 +105,7 @@
   </update>
 
   <select id="selectAll" resultMap="BaseResultMap">
-    select * from `fans` where 1=1
+    select * from myhome.fans where 1=1
     <if test="rid!=null">
       and rId=#{rid}
     </if>
@@ -115,6 +115,6 @@
   </select>
 
   <select id="getTopRoomCount" resultType="java.util.Map">
-    select count(*) c,rId from fans group by rId order by count(*) desc limit 10
+    select count(*) c,rId from myhome.fans group by rId order by count(*) desc limit 10
   </select>
 </mapper>

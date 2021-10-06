@@ -144,7 +144,7 @@ public class LoginController {
     public Rt modifyPwd(String oldPwd, String newPwd, String newPwd1, HttpServletRequest request) {
         // 校验两次密码是否一致
         if (!newPwd.equals(newPwd1)) {
-            return Rt.fail("两次密码输入不一致");
+            return Rt.fail("The two entered passwords do not match");
         }
         SysUser sysUser = ContextUser.sysUser();
         // 修改密码
@@ -155,7 +155,7 @@ public class LoginController {
             // 更新密码
             userMapper.updateByPrimaryKeySelective(user);
         } else {
-            return Rt.fail("旧密码不正确");
+            return Rt.fail("Old password is incorrect");
         }
         return Rt.success();
     }
@@ -166,12 +166,12 @@ public class LoginController {
         if (user != null && (!user.getUname().equals(request.getParameter("user_name")) || !user.getUtel().equals(request.getParameter("user_teL")))) {
             model.addAttribute("error", "error");
             response.sendRedirect("/forgotpassword?error");
-            return;
         }
         if (user != null) {
             // 更新密码
             user.setUpassword(SecureUtil.md5(request.getParameter("user_password")));
             userMapper.updateByPrimaryKeySelective(user);
+            response.sendRedirect("/login");
         }
     }
 }
