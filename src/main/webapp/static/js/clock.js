@@ -16,7 +16,7 @@ function getLangDate(){
     var hour = dateObj.getHours(); //当前系统时间的小时值
     var minute = dateObj.getMinutes(); //当前系统时间的分钟值
     var second = dateObj.getSeconds(); //当前系统时间的秒钟值
-    var timeValue = "" +((hour >= 12) ? (hour >= 18) ? "晚上" : "下午" : "上午" ); //当前时间属于上午、晚上还是下午
+    var timeValue = "" +((hour >= 12) ? (hour >= 18) ? "Evening" : "Afternoon" : "Morning" ); //当前时间属于上午、晚上还是下午
     newDate = dateFilter(year)+"-"+dateFilter(month)+"-"+dateFilter(date)+" "+dateFilter(hour)+":"+dateFilter(minute)+":"+dateFilter(second);
     document.getElementById("nowTime").innerHTML = " "+newDate;
     setTimeout(getLangDate,1000);

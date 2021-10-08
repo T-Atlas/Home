@@ -98,7 +98,7 @@
             <div class="btn-group pull-right">
                 <button type="button" class="btn btn-light m-1 px-3 edit">Edit</button>
                 <button type="button" class="btn btn-light m-1 px-3 del">Delete</button>
-                <button type="button" class="btn btn-light m-1 px-3 restPwd">Rest Password</button>
+                <button type="button" class="btn btn-light m-1 px-3 restPwd">Reset Password</button>
             </div>
         </td>
     </tr>

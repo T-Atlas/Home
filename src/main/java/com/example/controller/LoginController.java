@@ -163,15 +163,14 @@ public class LoginController {
     @RequestMapping("resetPassword")
     public void resetPassword(Model model, HttpServletRequest request, HttpServletResponse response) throws IOException {
         User user = userMapper.selectByPrimaryKey(Convert.toInt(request.getParameter("user_id")));
-        if (user != null && (!user.getUname().equals(request.getParameter("user_name")) || !user.getUtel().equals(request.getParameter("user_teL")))) {
-            model.addAttribute("error", "error");
-            response.sendRedirect("/forgotpassword?error");
-        }
-        if (user != null) {
-            // 更新密码
+        if(user != null && (user.getUname().equals(request.getParameter("user_name")) && user.getUtel().equals(request.getParameter("user_teL")))){
             user.setUpassword(SecureUtil.md5(request.getParameter("user_password")));
             userMapper.updateByPrimaryKeySelective(user);
             response.sendRedirect("/login");
+        }else{
+            model.addAttribute("error", "error");
+            response.sendRedirect("/forgotpassword?error");
         }
+
     }
 }

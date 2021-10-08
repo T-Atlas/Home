@@ -104,7 +104,7 @@
 <!--end header-->
 </body>
 </html>
-<script id="form_modify_pwd_html" type="text/html">
+<script id="form_modify_pwd_html" type="text/html" >
     <div class="layui-card-body">
         <form class="layui-form">
             <div class="layui-form-item">

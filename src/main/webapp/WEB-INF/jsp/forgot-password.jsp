@@ -61,6 +61,8 @@
     </div>
 </div>
 <!-- end wrapper -->
-</body>
 <script src="/static/js/jquery-3.6.0.js" type="text/javascript"></script>
 <script src="/static/js/forgetpassword.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -11,7 +11,7 @@ const ajax = function (options) {
         success: options.success,
         complete: options.complete,
         error: options.error || function () {
-            alert('请求错误，请重试！');
+            alert('Request error, please try again!');
         }
     });
 };
@@ -106,7 +106,7 @@ layui.use(['element', 'form', 'layer'], function () {
     const layer = layui.layer, form = layui.form;
 
     $('#logout').click(function () {
-        layer.confirm('您确定要退出吗？', {btn: ['确定', '取消'], icon: 3}, function () {
+        layer.confirm('Are you sure you want to log out?', {btn: ['YES', 'NO'], icon: 3}, function () {
             $('#logout-form').submit();
         });
     });
@@ -114,7 +114,7 @@ layui.use(['element', 'form', 'layer'], function () {
     $('#modify-pwd').click(function () {
         layer.open({
             type: 1,
-            title: '修改密码',
+            title: 'Modify password',
             area: '500px',
             content: $('#form_modify_pwd_html').html(),
             success: function (layero, index) {
@@ -122,7 +122,7 @@ layui.use(['element', 'form', 'layer'], function () {
                 form.verify({
                     pass: function (value) {
                         if (!/^[A-Za-z0-9]+$/.test(value)) {
-                            return '密码必须是英文或数字';
+                            return 'Password must be alphabetic or digital.';
                         }
                     }
                 });

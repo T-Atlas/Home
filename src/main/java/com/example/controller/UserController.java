@@ -90,7 +90,7 @@ public class UserController {
         if (!edit) {
             // 新增校验用户id是否重复
             if (user != null) {
-                return Rt.fail("ID已存在");
+                return Rt.fail("ID already exists");
             }
         }
         // 赋值基本信息属性
