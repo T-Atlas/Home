@@ -80,7 +80,8 @@
                                         <label>Room ID</label>
                                         <input class="form-control" id="user_room_id" name="user_room_id" type="text"/>
                                     </div>
-                                    <span class="text-center mt-4 font-weight-bold " id="valid" style=" font-size: 15px;color: #f55959">
+                                    <span class="text-center mt-4 font-weight-bold " id="valid"
+                                          style=" font-size: 15px;color: #f55959">
                                         <c:if test="${error != null }">
                                             <span>User ID Already exist</span>
                                         </c:if>
@@ -91,7 +92,8 @@
                                                 <input type="checkbox" name="user_check"
                                                        class="custom-control-input" id="customCheck">
                                                 <label class="custom-control-label" for="customCheck">I read and agree
-                                                    to <a href="/terms_conditions">Terms of Service</a> & <a href="/privacy_policy">Privacy Policy</a></label>
+                                                    to <a href="/terms_conditions">Terms of Service</a> & <a
+                                                            href="/privacy_policy">Privacy Policy</a></label>
                                             </div>
                                         </div>
                                     </div>
@@ -125,7 +127,7 @@
 <!-- end wrapper -->
 <!-- JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/jquery.js"></script>
 <!--Password show & hide js -->
 <script>
     $(document).ready(function () {

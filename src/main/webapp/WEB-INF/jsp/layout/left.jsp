@@ -39,18 +39,18 @@
             </a>
         </li>
         <li>
-        <a href="/device/fans">
-        <div class="parent-icon"><i class="lni lni-shuffle"></i>
-        </div>
-        <div class="menu-title">Fans</div>
-        </a>
+            <a href="/device/fans">
+                <div class="parent-icon"><i class="lni lni-shuffle"></i>
+                </div>
+                <div class="menu-title">Fans</div>
+            </a>
         </li>
     </c:if>
     <c:if test="${sysUser.getUtype()==2}">
         <li>
             <a href="/device/factory">
-            <div class="parent-icon"><i class="lni lni-direction-alt"></i>
-            </div>
+                <div class="parent-icon"><i class="lni lni-direction-alt"></i>
+                </div>
                 <div class="menu-title">Factory</div>
             </a>
         </li>
@@ -79,11 +79,11 @@
             </a>
         </li>
         <li>
-        <a href="/log/fans">
-        <div class="parent-icon"><i class="lni lni-shuffle"></i>
-        </div>
-        <div class="menu-title">Fans</div>
-        </a>
+            <a href="/log/fans">
+                <div class="parent-icon"><i class="lni lni-shuffle"></i>
+                </div>
+                <div class="menu-title">Fans</div>
+            </a>
         </li>
     </c:if>
     <li class="menu-label">User</li>

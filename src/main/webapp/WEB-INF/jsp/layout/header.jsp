@@ -30,9 +30,9 @@
     <link rel="stylesheet" href="/static/layui/css/layui.css"/>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/jquery.js"></script>
     <script src="/static/js/popper.min.js"></script>
-    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
     <!--plugins-->
     <script src="/static/plugins/simplebar/js/simplebar.min.js"></script>
     <script src="/static/plugins/metismenu/js/metisMenu.min.js"></script>
@@ -44,8 +44,8 @@
     <script src="/static/plugins/vectormap/jquery-jvectormap-us-aea-en.js"></script>
     <script src="/static/plugins/vectormap/jquery-jvectormap-uk-mill-en.js"></script>
     <script src="/static/plugins/vectormap/jquery-jvectormap-au-mill.js"></script>
-    <%--    <script src="/static/plugins/apexcharts-bundle/js/apexcharts.min.js"></script>--%>
-     <script src="/static/js/echarts.min.js"></script>
+    <script src="/static/plugins/apexcharts-bundle/js/apexcharts.min.js"></script>
+    <script src="/static/js/echarts.min.js"></script>
     <!-- App JS -->
     <script src="/static/js/app.js"></script>
 
@@ -82,7 +82,7 @@
                             <div class="media-body user-info">
                                 <p class="user-name mb-0"><%=sysUser.getUname() %> Home</p>
                             </div>
-                        <img src="/static/images/avatars/avatar-1.png" class="user-img" alt="user avatar">
+                            <img src="/static/images/avatars/avatar-1.png" class="user-img" alt="user avatar">
                         </div>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right">
@@ -104,7 +104,7 @@
 <!--end header-->
 </body>
 </html>
-<script id="form_modify_pwd_html" type="text/html" >
+<script id="form_modify_pwd_html" type="text/html">
     <div class="layui-card-body">
         <form class="layui-form">
             <div class="layui-form-item">

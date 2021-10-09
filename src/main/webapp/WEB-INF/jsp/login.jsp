@@ -50,11 +50,13 @@
                                                 <input type="checkbox" name="user_check"
                                                        class="custom-control-input" id="customCheck">
                                                 <label class="custom-control-label" for="customCheck">I read and agree
-                                                    to <a href="/terms_conditions">Terms of Service</a> & <a href="/privacy_policy">Privacy Policy</a></label>
+                                                    to <a href="/terms_conditions">Terms of Service</a> & <a
+                                                            href="/privacy_policy">Privacy Policy</a></label>
                                             </div>
                                         </div>
                                         <div class="form-group col text-right">
-                                            <i class='bx bxs-key mr-2'></i><a href="/forgotpassword">Forget Password?</a>
+                                            <i class='bx bxs-key mr-2'></i><a href="/forgotpassword">Forget
+                                            Password?</a>
                                         </div>
                                     </div>
                                     <span class="text-center mt-4 font-weight-bold " id="valid"
