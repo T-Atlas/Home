@@ -28,7 +28,7 @@
                     <div class="card radius-15">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-12 col-lg-12" style="text-align: center;"><h2>BUPT Smart Home User Terms and Conditions</h2></div>
+                                <div class="col-12 col-lg-12" style="text-align: center;"><h2>BUPT Smart Home Terms of Service</h2></div>
                             </div>
                             <p>
                                 This version update time: October 1st, 2021

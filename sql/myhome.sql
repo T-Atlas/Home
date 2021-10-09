@@ -39,10 +39,7 @@ CREATE TABLE `door`  (
 -- ----------------------------
 -- Records of door
 -- ----------------------------
-INSERT INTO `door` VALUES (1, 1, 1, '书房', 2, 3);
-INSERT INTO `door` VALUES (2, 0, 1, '次卧', 2, 1);
-INSERT INTO `door` VALUES (3, 1, 1, '主卧', 2, 10);
-INSERT INTO `door` VALUES (4, 1, 0, '客厅', 2, 10);
+INSERT INTO `door` VALUES (1,1,1,'study',2,1),(2,0,1,'second bedroom',2,1),(3,1,1,'bedroom',2,10),(4,1,0,'living room',2,10),(5,1,1,'toilet',2,10);
 
 -- ----------------------------
 -- Table structure for factory
@@ -83,7 +80,7 @@ CREATE TABLE `fans`  (
 -- ----------------------------
 -- Records of fans
 -- ----------------------------
-INSERT INTO `fans` VALUES (1, 10, 1, '主卧', 4, 10);
+INSERT INTO `fans` VALUES (1,10,1,'bedroom',4,10),(2,9,1,'toilet',4,10),(3,8,1,'study',4,10),(4,7,1,'dining room',4,1),(5,6,1,'living rooom',4,1);
 
 -- ----------------------------
 -- Table structure for light
@@ -106,17 +103,7 @@ CREATE TABLE `light`  (
 -- ----------------------------
 -- Records of light
 -- ----------------------------
-INSERT INTO `light` VALUES (2, 1, 1, 1, 1, 0, '书房', 1, 1);
-INSERT INTO `light` VALUES (3, 1, 1, 1, 1, 0, '老人房', 1, 1);
-INSERT INTO `light` VALUES (4, 80, 0, 0, 0, 1, '主卧', 1, 10);
-INSERT INTO `light` VALUES (5, 90, 255, 255, 255, 0, '次卧', 1, 10);
-INSERT INTO `light` VALUES (6, 1, 1, 1, 1, 0, '主卧', 1, 10);
-INSERT INTO `light` VALUES (7, 1, 1, 1, 1, 0, '次卧', 1, 10);
-INSERT INTO `light` VALUES (8, 1, 1, 1, 1, 0, '卫生间', 1, 10);
-INSERT INTO `light` VALUES (9, 1, 1, 1, 1, 0, '主卧', 1, 1);
-INSERT INTO `light` VALUES (10, 1, 1, 1, 1, 0, '餐厅', 1, 1);
-INSERT INTO `light` VALUES (11, 1, 1, 1, 1, 1, '书房', 1, 10);
-INSERT INTO `light` VALUES (12, 1, 1, 1, 1, 0, '次卧', 1, 10);
+INSERT INTO `light` VALUES (2,1,1,1,1,0,'sstudy',1,1),(3,1,1,1,1,0,'old room',1,1),(4,80,0,0,0,1,'bedroom',1,10),(5,90,255,255,255,0,'secondary bedroom',1,10),(6,1,1,1,1,0,'bedroom',1,10),(7,1,1,1,1,0,'secondary bedroom',1,10),(8,1,1,1,1,0,'toilet',1,10),(9,1,1,1,1,0,'bedroom',1,1),(10,1,1,1,1,0,'dining room',1,1),(11,1,1,1,1,1,'study',1,10),(12,1,1,1,1,0,'secondary bedroom',1,10);
 
 -- ----------------------------
 -- Table structure for log
@@ -139,15 +126,7 @@ CREATE TABLE `log`  (
 -- ----------------------------
 -- Records of log
 -- ----------------------------
-INSERT INTO `log` VALUES (1, 1, '2021-09-29 11:25:14', '主卧', 2, 10, NULL, 10, 1, NULL);
-INSERT INTO `log` VALUES (2, 1, '2021-09-28 16:57:36', '次卧', 2, 10, NULL, 20, 1, NULL);
-INSERT INTO `log` VALUES (3, 1, '2021-09-29 17:35:13', '书房', 2, 10, NULL, 30, 2, NULL);
-INSERT INTO `log` VALUES (4, 1, '2021-09-29 15:37:26', '餐厅', 2, 10, NULL, 40, 3, NULL);
-INSERT INTO `log` VALUES (5, 1, '2021-09-27 00:38:12', '次卧', 1, 10, 80, NULL, NULL, 0);
-INSERT INTO `log` VALUES (6, 2, '2021-09-29 20:31:42', '次卧', 1, 10, 70, NULL, NULL, 0);
-INSERT INTO `log` VALUES (7, 2, '2021-09-26 20:31:42', '书房', 1, 10, 60, NULL, NULL, 1);
-INSERT INTO `log` VALUES (8, 2, '2021-09-26 20:31:42', '主卧', 1, 10, 60, NULL, NULL, 0);
-INSERT INTO `log` VALUES (9, 2, '2021-09-23 20:31:42', '主卧', 1, 10, 70, NULL, NULL, 1);
+INSERT INTO `log` VALUES (1,1,'2021-09-29 11:25:14','bedroom',3,10,NULL,10,1,NULL),(2,1,'2021-09-28 16:57:36','secondary bedroom',3,10,NULL,20,1,NULL),(3,1,'2021-09-29 17:35:13','study',3,10,NULL,30,2,NULL),(4,1,'2021-09-29 15:37:26','dining room',3,10,NULL,40,3,NULL),(5,1,'2021-09-27 00:38:12','secondary bedroom',1,10,80,NULL,NULL,0),(6,2,'2021-09-29 20:31:42','secondary bedroom',1,10,70,NULL,NULL,0),(7,2,'2021-09-26 20:31:42','study',1,10,60,NULL,NULL,1),(8,2,'2021-09-26 20:31:42','bedroom',1,10,60,NULL,NULL,0),(9,2,'2021-09-23 20:40:42','bedroom',1,10,70,NULL,NULL,1),(10,3,'2021-09-23 20:41:42','dining room',3,10,NULL,23,45,NULL),(11,3,'2021-09-23 20:42:42','dining room',3,10,NULL,24,46,NULL),(12,3,'2021-09-23 20:43:42','dining room',3,10,NULL,25,47,NULL),(13,3,'2021-09-23 20:44:42','dining room',3,10,NULL,26,48,NULL),(14,3,'2021-09-23 20:45:42','dining room',3,10,NULL,27,49,NULL),(15,2,'2021-09-29 15:30:26','old room',1,1,55,NULL,NULL,1),(16,2,'2021-09-29 15:32:26','old room',1,1,56,NULL,NULL,1),(17,2,'2021-09-29 15:34:26','old room',1,1,57,NULL,NULL,1),(18,2,'2021-09-29 15:36:26','old room',1,1,58,NULL,NULL,1),(19,2,'2021-09-29 15:38:26','old room',1,1,60,NULL,NULL,1),(20,6,'2021-09-29 11:20:14','toilet',3,1,NULL,31,65,NULL),(21,6,'2021-09-29 11:22:14','toilet',3,1,NULL,30,64,NULL),(22,6,'2021-09-29 11:24:14','toilet',3,1,NULL,29,63,NULL),(23,6,'2021-09-29 11:26:14','toilet',3,1,NULL,30,62,NULL),(24,6,'2021-09-29 11:28:14','toilet',3,1,NULL,31,61,NULL);
 
 -- ----------------------------
 -- Table structure for sensor
@@ -167,12 +146,7 @@ CREATE TABLE `sensor`  (
 -- ----------------------------
 -- Records of sensor
 -- ----------------------------
-INSERT INTO `sensor` VALUES (1, 1, 1, '次卧', 3, 1);
-INSERT INTO `sensor` VALUES (2, 37.5, 25.4, '客厅', 3, 10);
-INSERT INTO `sensor` VALUES (3, 10.5, 10.8, '客厅', 3, 10);
-INSERT INTO `sensor` VALUES (4, 12, 12, '客厅', 3, 10);
-INSERT INTO `sensor` VALUES (5, NULL, NULL, '客厅', 3, 10);
-
+INSERT INTO `sensor` VALUES (1,1,1,'secondary bedroom',3,1),(2,37.5,25.4,'living room',3,10),(3,10.5,10.8,'dining room',3,10),(4,12,12,'study',3,10),(5,14,16,'bedroom',3,10),(6,20,15,'toilet',3,1),(7,13.7,26.8,'study',3,1);
 -- ----------------------------
 -- Table structure for user
 -- ----------------------------
@@ -194,8 +168,6 @@ CREATE TABLE `user`  (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES (202100, 'e10adc3949ba59abbe56e057f20f883e', '管理员', 20, '1@qq.com', '15551305121', NULL, 1);
-INSERT INTO `user` VALUES (202101, 'e10adc3949ba59abbe56e057f20f883e', '李小丫', 30, '2@qq.com', '15551305122', 10, 0);
-INSERT INTO `user` VALUES (202102, 'e10adc3949ba59abbe56e057f20f883e', '设备厂家', 40, '3@qq.com', '15551305123', NULL, 2);
+INSERT INTO `user` VALUES (202100,'e10adc3949ba59abbe56e057f20f883e','adminnistrator',20,'1@qq.com','15551305121',NULL,1),(202101,'e10adc3949ba59abbe56e057f20f883e','lixiaoya',30,'2@qq.com','15551305122',10,0),(202102,'e10adc3949ba59abbe56e057f20f883e','factory',40,'3@qq.com','15551305123',NULL,2);
 
 SET FOREIGN_KEY_CHECKS = 1;

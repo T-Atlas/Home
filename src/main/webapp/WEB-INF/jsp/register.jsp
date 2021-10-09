@@ -91,7 +91,7 @@
                                                 <input type="checkbox" name="user_check"
                                                        class="custom-control-input" id="customCheck">
                                                 <label class="custom-control-label" for="customCheck">I read and agree
-                                                    to <a href="/terms_conditions">Terms & Conditions</a></label>
+                                                    to <a href="/terms_conditions">Terms of Service</a> & <a href="/privacy_policy">Privacy Policy</a></label>
                                             </div>
                                         </div>
                                     </div>
