@@ -55,6 +55,11 @@ public class LoginController {
         return "terms-conditions";
     }
 
+    @RequestMapping("privacy_policy")
+    public String privacyPolicy() {
+        return "privacy-policy";
+    }
+
     /**
      * 用户登录
      *

@@ -28,20 +28,46 @@
                     <div class="card radius-15">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-12 col-lg-12" style="text-align: center;"><h2>用户使用协议</h2></div>
+                                <div class="col-12 col-lg-12" style="text-align: center;"><h2>BUPT Smart Home User Terms and Conditions</h2></div>
                             </div>
                             <p>
-                                本次版本更新时间：2021年【9】月【30】日
+                                This version update time: October 1st, 2021
 
-                                【首部及导言】
+                                I. Conditions of Use
+                                　　Welcome to BUPT Smart Home, which is offered to you by the production team under the following conditions. If you visit or spend money at BUPT Smart Home, you will have to accept these conditions. Please read them carefully. In addition, when you use a current or future service agreement or visit or purchase from an affiliate of BUPT Smart Home, whether or not included in the BUPT Smart Home web site, you are subject to the conditions and guidelines that apply to those services or business practices.
+                            </p>
 
-                                《哔哩哔哩弹幕网用户使用协议》（以下简称“本协议”）是您与哔哩哔哩之间关于使用哔哩哔哩各项服务的法律协议。“哔哩哔哩”是指哔哩哔哩弹幕网的运营公司上海宽娱数码科技有限公司及其关联公司。
+                            <a href="/privacy_policy">II. Privacy</a>
 
-                                本协议中与您的权益（可能）存在重大关系的条款（包括免除哔哩哔哩责任的条款、限制您权利的条款、争议解决条款及司法管辖条款等），哔哩哔哩已采用字体加粗的方式来特别提醒您，请您留意重点查阅。请您确保您在使用哔哩哔哩服务前已仔细阅读、充分理解并毫无保留地接受本协议所有条款。
+                            <p>
+	                                　　In order to understand our situation, please read our Privacy Notice, which also governs your visit to BUPT Smart Home.
 
-                                《哔哩哔哩隐私政策》、《帮助中心》、《社区规则》、《小黑屋处罚条例》以及哔哩哔哩公布的其他协议规范、规则、声明、公告、政策等（以下统称“其他哔哩哔哩规则”）是本协议不可分割的组成部分，您在使用哔哩哔哩服务时应同样遵守。您接受并同意本协议的行为即视为您同意并接受其他哔哩哔哩规则，您接受并同意任一其他哔哩哔哩规则的行为亦视为您接受并同意本协议。
+                                III. Copyright
+                                　　All content included on this site, such as text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations and software is copyrighted by BUPT Smart Home and its content providers and is protected by U.S. and international copyright laws. The content compiled on this site is copyrighted exclusively by BUPT Smart Home and is protected by international copyright laws. The software used on this site is copyrighted by BUPT Smart Home or its software providers and is protected by international copyright laws.
 
-                                您确认您具备完全民事权利能力和完全民事行为能力，有能力同意并遵守本协议，并对您本协议项下的全部行为独立承担法律责任。若您不具备前述与您行为相适应的民事行为能力，则应获得法定监护人的知情同意。如您尚未成年，请在法定监护人的陪同下阅读和判断是否同意本协议，请特别注意未成年人条款。未成年人行使和履行本协议项下的权利和义务视为已获得法定监护人的认可。
+                                IV. License and Site Access
+                                　　BUPT Smart Home grants you a limited license to access and make personal use of the site and not to download (other than page caching) or modify it, even in part, without the express written consent of BUPT Smart Home. This license does not include the following: resale and commercial use of this site, use and collection of any descriptions of products and prices and their listings; derivative use of this site and its contents; downloading and copying of billing information for the benefit of another wholesaler; use of tools for the development, automation and collection and extraction of data and similar information. The Site and any part thereof may not be reproduced, duplicated, copied, sold, resold, accessed or otherwise exploited for commercial purposes without the express written consent of BUPT Smart Home. The site's design techniques may not be used to imitate the design of trademarks, logos, and other proprietary information (including images, text, page designs, and forms) without the express written consent of BUPT Smart Home and its affiliates. You may not use the Site or any other "hidden text" utilizing the Site's name and trademarks without the express written consent of BUPT Smart Home and its affiliates. Any use not authorized or endorsed by the site will result in termination of the license. You are permitted to make limited hyperlinks to the pages of this website as long as the link is not false, misleading, derogatory or otherwise offensive to the website or its affiliates, and the right to link is non-exclusive and may be revoked at any time. Without the express written consent of the website, you may not use the logo or other graphics and trademarks owned by the website in the link.
+
+                                V. Accounts
+                                　　If you use this site, you are responsible for maintaining the confidentiality of your account and password and for restricting access to your computer by others, and you agree to be responsible for all actions that occur under your account and password. bupt smart home does not sell products to children, but does sell to adults who are able to use credit cards. If you are under 18 years of age, you may use the BUPT Smart Home website only with a parent or guardian BUPT Smart Home and its affiliates have the right to refuse service, close accounts, cancel or edit content, or cancel orders at their sole discretion.
+
+                                VI. Copyright Disputes
+                                　　The BUPT Smart Home website respects the intellectual property rights of others. If you believe that we have violated your copyright, please follow our notices and procedures for copyright infringement lawsuits.
+
+                                vii. other business
+                                　　Parties other than BUPT Smart Home and its affiliates operate stores, provide services, or sell product lines online. In addition, we provide links to the Web sites of related companies and certain other businesses. BUPT Smart Home is not responsible for the inspection and evaluation, and we do not guarantee the availability of these companies or individuals or the content of their web pages. bupt smart home has no responsibility, and is not liable for the actions, products, or web page content of third parties. You should carefully read their privacy policy statements and other conditions of use.
+
+                                viii. no warranty and limited liability
+                                　　the content of this site is provided by bupt smart home as it is or as it becomes available. bupt smart home assumes no responsibility for the operation of this site, the information, content, materials and products on this site and makes no warranties, express or implied. you expressly agree that use of the site is at your own risk.
+                                　　BUPT Smart Home disclaims all warranties, express and implied, to the fullest extent permissible pursuant to applicable law, including, but not limited to, implied warranties of merchantability and fitness for a particular purpose. Home shall not be liable for any damages arising out of the use of this site, including, but not limited to, direct, indirect, incidental, punitive, and consequential damages.
+                                　　limitations on implied warranties, limitations on exclusivity and limitations on certain damages under certain state laws. If these laws apply to you, all or some of the above waivers, exclusions and limitations may not apply to you and you may have additional rights.
+
+                                IX. Disputes
+                                　　Disputes arising out of or relating to your access to BUPT Smart Home will be submitted to arbitration, unless you use a method that infringes or threatens to infringe the intellectual property rights of the site, and the site will seek injunctive or other appropriate relief in a court of law; you must consent to the exclusive jurisdiction of such courts and venue. The arbitration award will serve as an important reference in the judgment of the court having jurisdiction. To the maximum extent permitted by applicable law, if no arbitration is agreed to under this Agreement it will be conducted in conjunction with arbitration involving other parties under this Agreement, whether conducted through group arbitration or otherwise.
+
+                                x. site rules, modifications and other
+                                　　Please review our rules, such as the pricing and validity provisions posted on this page. These rules will also govern your visit to the Site. We reserve the right to change the pages, rules and conditions of use at any time. If these conditions are deemed invalid or for any other reason unenforceable, the condition will be severed and will not affect the validity and enforcement of the other conditions.
+                                　　Our address: www.bupthome.com
                             </p>
                             <button class="btn btn-light m-1 px-3" type="button" onclick="back()">Back
                             </button>
