@@ -16,7 +16,7 @@
     <link href="/static/css/icons.css" rel="stylesheet"/>
     <!-- App CSS -->
     <link href="/static/css/app.css" rel="stylesheet"/>
-    <script src="/static/js/jquery-3.6.0.js" type="text/javascript"></script>
+    <script src="/static/js/jquery.js" type="text/javascript"></script>
     <script src="/static/js/common.js"></script>
 </head>
 
@@ -61,7 +61,7 @@
     </div>
 </div>
 <!-- end wrapper -->
-<script src="/static/js/jquery-3.6.0.js" type="text/javascript"></script>
+<script src="/static/js/jquery.js" type="text/javascript"></script>
 <script src="/static/js/forgetpassword.js" type="text/javascript"></script>
 </body>
 

@@ -16,7 +16,7 @@
     <link href="/static/css/icons.css" rel="stylesheet"/>
     <!-- App CSS -->
     <link href="/static/css/app.css" rel="stylesheet"/>
-    <script src="/static/js/jquery-3.6.0.js" type="text/javascript"></script>
+    <script src="/static/js/jquery.js" type="text/javascript"></script>
 
     <script src="/static/layui/layui.js"></script>
     <script src="/static/js/common.js"></script>
@@ -144,7 +144,7 @@
     });
 
 </script>
-<script src="/static/js/jquery-3.6.0.js" type="text/javascript"></script>
+<script src="/static/js/jquery.js" type="text/javascript"></script>
 <script src="/static/js/registervalid.js" type="text/javascript"></script>
 </body>
 
