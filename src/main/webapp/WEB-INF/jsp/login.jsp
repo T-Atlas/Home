@@ -11,7 +11,7 @@
     <!--    <script src="../js/pace.min.js"></script>-->
     <script type="text/javascript" src="/static/js/pace.min.js"></script>
     <!-- Bootstrap CSS -->
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/static/css/bootstrap.css" rel="stylesheet"/>
     <!-- Icons CSS -->
     <link href="/static/css/icons.css" rel="stylesheet"/>
     <!-- App CSS -->
@@ -54,8 +54,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group col text-right">
-                                            <a href="/forgotpassword"><i class='bx bxs-key mr-2'></i>Forget
-                                                Password?</a>
+                                            <i class='bx bxs-key mr-2'></i><a href="/forgotpassword">Forget Password?</a>
                                         </div>
                                     </div>
                                     <span class="text-center mt-4 font-weight-bold " id="valid"

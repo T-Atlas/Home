@@ -11,7 +11,7 @@
     <!--    <script src="../js/pace.min.js"></script>-->
     <script type="text/javascript" src="/static/js/pace.min.js"></script>
     <!-- Bootstrap CSS -->
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/static/css/bootstrap.css" rel="stylesheet"/>
     <!-- Icons CSS -->
     <link href="/static/css/icons.css" rel="stylesheet"/>
     <!-- App CSS -->
