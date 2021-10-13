@@ -45,18 +45,31 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-12 col-md-3">
-                        </div>
-                        <div class="col-sm-12 col-md-3">
-                            <div class="card-body">
-                                <div class="media align-items-center">
+                        <div class="col-12 col-lg-6">
+                            <div class="media align-items-center">
+                                <div class="col px-md-5 media align-items-center" id="he-plugin-standard"></div>
+                                <div class="col px-md-5 media align-items-center">
                                     <button class="btn btn-light" type="button" id="refresh" style="float: right;">
-                                        Update
-                                        current information
+                                        Update current information
                                     </button>
                                 </div>
                             </div>
                         </div>
+                        <script>
+                            WIDGET = {
+                                "CONFIG": {
+                                    "layout": "1",
+                                    "width": 450,
+                                    "height": 150,
+                                    "background": "1",
+                                    "dataColor": "FFFFFF",
+                                    "language": "en",
+                                    "borderRadius": "5",
+                                    "key": "347841292bd54500b323fd42c3555196"
+                                }
+                            }
+                        </script>
+                        <script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
                     </div>
                     <br>
                     <div class="row" id="view">
@@ -142,18 +155,18 @@
     {{# if(index==0){ }}
     <hr>
     <div class="media align-items-center">
-        <div class="media-body ml-3">
-            <p class="mb-0">Room ID</p>
+        <div class="media-body ml-3 text-white">
+            <p class="mb-0 text-white">Room ID</p>
         </div>
-        <p class="mb-0">Count</p>
+        <p class="mb-0 text-white">Count</p>
     </div>
     {{# } }}
     <hr>
     <div class="media align-items-center">
-        <div class="media-body ml-3">
-            <p class="mb-0">{{ item.rId }}</p>
+        <div class="media-body ml-3 text-white">
+            <p class="mb-0 text-white">{{ item.rId }}</p>
         </div>
-        <p class="mb-0">{{ item.c }}</p>
+        <p class="mb-0 text-white">{{ item.c }}</p>
     </div>
     {{#  }) }}
 </script>

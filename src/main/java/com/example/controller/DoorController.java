@@ -3,7 +3,9 @@ package com.example.controller;
 import cn.hutool.core.convert.Convert;
 import com.example.config.ContextUser;
 import com.example.dao.DoorMapper;
+import com.example.dao.LogMapper;
 import com.example.model.Door;
+import com.example.model.Log;
 import com.example.model.Rt;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -26,7 +28,8 @@ public class DoorController {
 
     @Autowired
     DoorMapper doorMapper;
-
+    @Autowired
+    LogMapper logMapper;
     /**
      * 列表
      *
@@ -71,6 +74,7 @@ public class DoorController {
             record.setRid(Convert.toInt(request.getParameter("rid")));
             // 新增信息
             doorMapper.insertSelective(record);
+
         } else {
             record.setDeviceid(deviceId);
             record.setIsLock(Convert.toInt(request.getParameter("is_lock")));
@@ -81,6 +85,13 @@ public class DoorController {
             //修改信息
             doorMapper.updateByPrimaryKeySelective(record);
         }
+        Log log = new Log();
+        log.setDeviceid(deviceId);
+        log.setLocation(record.getLocation());
+        log.setRid(record.getRid());
+        log.setIsClose(record.getIsClose());
+        log.setTypeid(2);
+        logMapper.insertSelective(log);
         return Rt.success();
     }
 

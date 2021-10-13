@@ -27,4 +27,5 @@ public interface SensorMapper {
     List<Sensor> selectAll(@Param("rid") Integer rid, @Param("keyword") String keyword);
 
     List<Map> getTopRoomCount();
+
 }

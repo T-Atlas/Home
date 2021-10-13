@@ -45,17 +45,32 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-12 col-md-3">
-                        </div>
-                        <div class="col-sm-12 col-md-3">
-                            <div class="card-body">
-                                <div class="media align-items-center">
+
+                        <div class="col-12 col-lg-6">
+                            <div class="media align-items-center">
+                                <div class="col px-md-5 media align-items-center" id="he-plugin-standard"></div>
+                                <div class="col px-md-5 media align-items-center">
                                     <button class="btn btn-light" type="button" id="refresh" style="float: right;">
                                         Update current information
                                     </button>
                                 </div>
                             </div>
                         </div>
+                        <script>
+                            WIDGET = {
+                                "CONFIG": {
+                                    "layout": "1",
+                                    "width": 450,
+                                    "height": 150,
+                                    "background": "1",
+                                    "dataColor": "FFFFFF",
+                                    "language": "en",
+                                    "borderRadius": "5",
+                                    "key": "347841292bd54500b323fd42c3555196"
+                                }
+                            }
+                        </script>
+                        <script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
                     </div>
                     <br>
                     <div class="row" id="view">
@@ -143,7 +158,7 @@
         const getDoorNearly7DayCount = function () {
             ajax({
                 url: "../log/getNearly7DayCount",
-                data: {typeId: 1},
+                data: {typeId: 2},
                 success: function (res) {
                     if (res.code > 0) {
                         var dateList = [], valList = [];
@@ -226,7 +241,7 @@
         const getTodayCount = function () {
             ajax({
                 url: "../log/getDateValueByHour",
-                data: {typeId: 2},
+                data: {typeId: 3},
                 success: function (res) {
                     if (res.code > 0) {
                         var dateList = [], temperatureList = [], humidityList = [];
