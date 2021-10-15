@@ -18,22 +18,21 @@ class HomeApplicationTests {
 
         double temperature = 30.0;
         double humidity = 50.0;
-        double randomNumber =randomDouble();
         Sensor sensor = new Sensor();
         sensor.setHumidity(50.0);
         sensor.setTemperature(30.0);
         for(int i = 0; i <100;i++){
-            temperature = sensor.getTemperature()+(randomNumber*10-5);
-            humidity = sensor.getHumidity()+(randomNumber*20-10);
-            if(humidity>0&&humidity<100){
+            temperature = sensor.getTemperature()+randomDouble(-5.0,5.0);
+            humidity = sensor.getHumidity()+randomDouble(-10.0,10.0);
+            if (humidity > 0 && humidity < 100) {
                 sensor.setHumidity(humidity);
-            }else{
-                sensor.setHumidity(50+(randomNumber*10-20));
+            } else {
+                sensor.setHumidity(50 + randomDouble(-10.0,10.0));
             }
-            if(temperature>-20&&temperature<50){
+            if (temperature > -20 && temperature < 50) {
                 sensor.setTemperature(temperature);
-            }else{
-                sensor.setTemperature(20+(randomNumber*5-10));
+            } else {
+                sensor.setTemperature(20 + randomDouble(-5.0,5.0));
             }
             System.out.println("t="+temperature);
             System.out.println("h="+humidity);

@@ -23,7 +23,6 @@ public class AutoGenerator {
     LogMapper logMapper;
     private double temperature = 30.0;
     private double humidity = 50.0;
-    private double randomNumber = randomDouble();
 
     @Scheduled(cron = "0 0/30 * * * ?")
     public void generateDatesJob() {
@@ -33,17 +32,17 @@ public class AutoGenerator {
     private void generateDates() {
 
         Sensor sensor = sensorMapper.selectByPrimaryKey(1);
-        temperature = sensor.getTemperature() + (randomNumber * 10 - 5);
-        humidity = sensor.getHumidity() + (randomNumber * 20 - 10);
+        temperature = sensor.getTemperature() + randomDouble(-5.0,5.0);
+        humidity = sensor.getHumidity() + randomDouble(-10.0,10.0);
         if (humidity > 0 && humidity < 100) {
             sensor.setHumidity(humidity);
         } else {
-            sensor.setHumidity(50 + (randomNumber * 10 - 20));
+            sensor.setHumidity(50 + randomDouble(-10.0,10.0));
         }
         if (temperature > -20 && temperature < 50) {
             sensor.setTemperature(temperature);
         } else {
-            sensor.setTemperature(20 + (randomNumber * 5 - 10));
+            sensor.setTemperature(20 + randomDouble(-5.0,5.0));
         }
 
         sensorMapper.updateByPrimaryKeySelective(sensor);
