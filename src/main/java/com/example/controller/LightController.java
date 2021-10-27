@@ -96,7 +96,7 @@ public class LightController {
         log.setLocation(record.getLocation());
         log.setRid(record.getRid());
         log.setIsClose(record.getIsClose());
-        log.setTypeid(1);
+        log.setTypeid(record.getTypeid());
         log.setLevel(record.getLevel());
         logMapper.insertSelective(log);
         return Rt.success();

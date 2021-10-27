@@ -2,7 +2,9 @@ package com.example.controller;
 
 import cn.hutool.core.convert.Convert;
 import com.example.config.ContextUser;
+import com.example.dao.LogMapper;
 import com.example.dao.SensorMapper;
+import com.example.model.Log;
 import com.example.model.Rt;
 import com.example.model.Sensor;
 import com.github.pagehelper.PageHelper;
@@ -26,6 +28,8 @@ public class SensorController {
 
     @Autowired
     SensorMapper sensorMapper;
+    @Autowired
+    LogMapper logMapper;
 
     /**
      * 列表
@@ -81,6 +85,14 @@ public class SensorController {
             //修改信息
             sensorMapper.updateByPrimaryKeySelective(record);
         }
+        Log log = new Log();
+        log.setDeviceid(deviceId);
+        log.setLocation(record.getLocation());
+        log.setRid(record.getRid());
+        log.setHumidity(record.getHumidity());
+        log.setTemperature(record.getTemperature());
+        log.setTypeid(record.getTypeid());
+        logMapper.insertSelective(log);
         return Rt.success();
     }
 

@@ -3,7 +3,9 @@ package com.example.controller;
 import cn.hutool.core.convert.Convert;
 import com.example.config.ContextUser;
 import com.example.dao.FansMapper;
+import com.example.dao.LogMapper;
 import com.example.model.Fans;
+import com.example.model.Log;
 import com.example.model.Rt;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -26,6 +28,8 @@ public class FansController {
 
     @Autowired
     FansMapper fansMapper;
+    @Autowired
+    LogMapper logMapper;
 
     /**
      * 列表
@@ -81,6 +85,14 @@ public class FansController {
             //修改信息
             fansMapper.updateByPrimaryKeySelective(record);
         }
+        Log log = new Log();
+        log.setDeviceid(deviceId);
+        log.setLocation(record.getLocation());
+        log.setRid(record.getRid());
+        log.setIsClose(record.getIsClose());
+        log.setTypeid(record.getTypeid());
+        log.setLevel(record.getLevel());
+        logMapper.insertSelective(log);
         return Rt.success();
     }
 

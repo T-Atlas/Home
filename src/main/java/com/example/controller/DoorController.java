@@ -90,7 +90,7 @@ public class DoorController {
         log.setLocation(record.getLocation());
         log.setRid(record.getRid());
         log.setIsClose(record.getIsClose());
-        log.setTypeid(2);
+        log.setTypeid(record.getTypeid());
         logMapper.insertSelective(log);
         return Rt.success();
     }
