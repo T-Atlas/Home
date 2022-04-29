@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.g65.homespring.mapper.SensorMapper">
+
+    <resultMap id="BaseResultMap" type="com.g65.homespring.bean.Sensor">
+            <id property="deviceid" column="deviceId" jdbcType="INTEGER"/>
+            <result property="humidity" column="humidity" jdbcType="DOUBLE"/>
+            <result property="temperature" column="temperature" jdbcType="DOUBLE"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        deviceId,humidity,temperature
+    </sql>
+</mapper>

@@ -1,0 +1,34 @@
+spring:
+  datasource:
+    name: myhome  #数据库名
+    url: jdbc:mysql://localhost:3306/myhome?useSSL=true&serverTimezone=UTC&allowPublicKeyRetrieval=true #url
+    username: root  #用户名
+    password: 123456  #密码
+    driver-class-name: com.mysql.cj.jdbc.Driver  #数据库链接驱动
+  thymeleaf:
+    # 默认true,开发是设置false,上线是设置为true以便提高性能
+    # 开发时关闭缓存,不然没法看到实时页面
+    cache: false
+    enabled: true  #开启thymeleaf视图解析
+    encoding: UTF-8
+    #模板的模式，支持 HTML, XML TEXT JAVASCRIPT
+    #严格的HTML语法模式
+    mode: HTML
+    # 指定模板所在的目录
+    prefix: classpath:/templates/
+    #后缀名
+    suffix: .html
+    #    # 检查模板路径是否存在
+    #    check-template-location: true
+    servlet:
+      content-type: text/html
+    #    enabled: true
+    #    check-template: false
+
+## 该配置节点为独立的节点，有很多同学容易将这个配置放在spring的节点下，导致配置无法被识别
+mybatis:
+  mapper-locations: classpath:mapping/*.xml  #注意：一定要对应mapper映射xml文件的所在路径
+  type-aliases-package: com.g65.homespring.bean  # 注意：对应实体类的路径
+
+server:
+  port: 8888 #端口

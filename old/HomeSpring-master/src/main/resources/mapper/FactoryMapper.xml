@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.g65.homespring.mapper.FactoryMapper">
+
+    <resultMap id="BaseResultMap" type="com.g65.homespring.bean.Factory">
+            <id property="typeid" column="typeId" jdbcType="INTEGER"/>
+            <result property="model" column="model" jdbcType="INTEGER"/>
+            <result property="fname" column="fName" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        typeId,model,fName
+    </sql>
+</mapper>
