@@ -5,12 +5,13 @@
 <mapper namespace="com.g65.homespring.mapper.DoorMapper">
 
     <resultMap id="BaseResultMap" type="com.g65.homespring.bean.Door">
-            <id property="deviceid" column="deviceId" jdbcType="INTEGER"/>
-            <result property="isLock" column="is_lock" jdbcType="INTEGER"/>
-            <result property="isClose" column="is_close" jdbcType="INTEGER"/>
+        <id property="deviceid" column="deviceId" jdbcType="INTEGER"/>
+        <result property="isLock" column="is_lock" jdbcType="INTEGER"/>
+        <result property="isClose" column="is_close" jdbcType="INTEGER"/>
     </resultMap>
 
     <sql id="Base_Column_List">
-        deviceId,is_lock,is_close
+        deviceId
+        ,is_lock,is_close
     </sql>
 </mapper>

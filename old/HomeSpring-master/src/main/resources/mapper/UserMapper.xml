@@ -5,17 +5,18 @@
 <mapper namespace="com.g65.homespring.mapper.UserMapper">
 
     <resultMap id="BaseResultMap" type="com.g65.homespring.bean.User">
-            <id property="uid" column="uId" jdbcType="INTEGER"/>
-            <result property="rid" column="rId" jdbcType="INTEGER"/>
-            <result property="utel" column="uTel" jdbcType="VARCHAR"/>
-            <result property="uemail" column="uEmail" jdbcType="VARCHAR"/>
-            <result property="uage" column="uAge" jdbcType="INTEGER"/>
-            <result property="uname" column="uName" jdbcType="VARCHAR"/>
-            <result property="upassword" column="uPassword" jdbcType="VARCHAR"/>
+        <id property="uid" column="uId" jdbcType="INTEGER"/>
+        <result property="rid" column="rId" jdbcType="INTEGER"/>
+        <result property="utel" column="uTel" jdbcType="VARCHAR"/>
+        <result property="uemail" column="uEmail" jdbcType="VARCHAR"/>
+        <result property="uage" column="uAge" jdbcType="INTEGER"/>
+        <result property="uname" column="uName" jdbcType="VARCHAR"/>
+        <result property="upassword" column="uPassword" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="Base_Column_List">
-        uId,rId,uTel,
+        uId
+        ,rId,uTel,
         uEmail,uAge,uName,
         uPassword
     </sql>

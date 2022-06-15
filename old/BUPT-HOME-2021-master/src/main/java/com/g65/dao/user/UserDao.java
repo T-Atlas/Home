@@ -1,13 +1,14 @@
 package com.g65.dao.user;
 
 import java.sql.Connection;
-import  com.g65.entity.UserEntity;
+
+import com.g65.entity.UserEntity;
 
 /**
  * @author LianJunhong
  */
 public interface UserDao {
-    public UserEntity getLoginUser(Connection connection,int userId);
+    public UserEntity getLoginUser(Connection connection, int userId);
 
     public int updateUserName(Connection connection, int userId, String userName);
 

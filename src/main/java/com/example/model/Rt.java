@@ -27,6 +27,22 @@ public class Rt implements Serializable {
         this.data = data;
     }
 
+    public static Rt success() {
+        return new Rt(1, "Operation successful", null);
+    }
+
+    public static Rt success(Object data) {
+        return new Rt(1, "Operation successful", data);
+    }
+
+    public static Rt fail() {
+        return new Rt(-1, "Operation failed", null);
+    }
+
+    public static Rt fail(String msg) {
+        return new Rt(-1, msg, null);
+    }
+
     public int getCode() {
         return code;
     }
@@ -49,21 +65,5 @@ public class Rt implements Serializable {
 
     public void setData(Object data) {
         this.data = data;
-    }
-
-    public static Rt success() {
-        return new Rt(1, "Operation successful", null);
-    }
-
-    public static Rt success(Object data) {
-        return new Rt(1, "Operation successful", data);
-    }
-
-    public static Rt fail() {
-        return new Rt(-1, "Operation failed", null);
-    }
-
-    public static Rt fail(String msg) {
-        return new Rt(-1, msg, null);
     }
 }

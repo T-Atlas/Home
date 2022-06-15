@@ -17,10 +17,10 @@ public class SystemFilter implements Filter {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
 
-        if(request.getSession().getAttribute(Constants.USER_SESSION) == null){
+        if (request.getSession().getAttribute(Constants.USER_SESSION) == null) {
             response.sendRedirect("/login.jsp");
-        }else{
-            filterChain.doFilter(servletRequest,servletResponse);
+        } else {
+            filterChain.doFilter(servletRequest, servletResponse);
         }
     }
 }

@@ -7,12 +7,11 @@ import com.g65.homespring.mapper.LogMapper;
 import org.springframework.stereotype.Service;
 
 /**
- *
  * @author LianJunhong
  */
 @Service
 public class LogServiceImpl extends ServiceImpl<LogMapper, Log>
-    implements LogService{
+        implements LogService {
 
 }
 

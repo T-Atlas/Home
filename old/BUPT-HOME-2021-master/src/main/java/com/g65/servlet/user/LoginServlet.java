@@ -29,18 +29,18 @@ public class LoginServlet extends HttpServlet {
         String userPassword = req.getParameter("password");
 
         UserService userService = new UserServiceImpl();
-        UserEntity user = userService.login(userId,userPassword);
-        if(user != null){
+        UserEntity user = userService.login(userId, userPassword);
+        if (user != null) {
 
-            HttpSession session=req.getSession();
-            session.setAttribute(Constants.USER_SESSION,user);
+            HttpSession session = req.getSession();
+            session.setAttribute(Constants.USER_SESSION, user);
 
             session.setAttribute("user", user);
             session.setAttribute("username", user.getuName());
 
             req.getRequestDispatcher("pages/index.jsp").forward(req, resp);
 
-        }else{
+        } else {
             resp.setContentType("text/html;charset=utf-8");
             PrintWriter out = resp.getWriter();
             out.println(" <script language='javascript'> alert('User ID or Password wrong');location.href='login.jsp'; </script> ");

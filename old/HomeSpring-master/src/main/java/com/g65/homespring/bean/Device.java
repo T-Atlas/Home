@@ -4,46 +4,44 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
+
 import lombok.Data;
 
 /**
  * 存储设备信息
+ *
  * @author LianJunhong
  * @TableName device
  */
-@TableName(value ="device")
+@TableName(value = "device")
 @Data
 public class Device implements Serializable {
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
     /**
-     * 
+     *
      */
     @TableId
     private Integer deviceid;
-
     /**
-     * 
+     *
      */
     private Integer rid;
-
     /**
      * 0 is consist
      * 1 is inconsist
      */
     private Integer isConsist;
-
     /**
-     * 
+     *
      */
     private Integer typeid;
-
     /**
-     * 
+     *
      */
     private String location;
-
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
 
     @Override
     public boolean equals(Object that) {
@@ -58,10 +56,10 @@ public class Device implements Serializable {
         }
         Device other = (Device) that;
         return (this.getDeviceid() == null ? other.getDeviceid() == null : this.getDeviceid().equals(other.getDeviceid()))
-            && (this.getRid() == null ? other.getRid() == null : this.getRid().equals(other.getRid()))
-            && (this.getIsConsist() == null ? other.getIsConsist() == null : this.getIsConsist().equals(other.getIsConsist()))
-            && (this.getTypeid() == null ? other.getTypeid() == null : this.getTypeid().equals(other.getTypeid()))
-            && (this.getLocation() == null ? other.getLocation() == null : this.getLocation().equals(other.getLocation()));
+                && (this.getRid() == null ? other.getRid() == null : this.getRid().equals(other.getRid()))
+                && (this.getIsConsist() == null ? other.getIsConsist() == null : this.getIsConsist().equals(other.getIsConsist()))
+                && (this.getTypeid() == null ? other.getTypeid() == null : this.getTypeid().equals(other.getTypeid()))
+                && (this.getLocation() == null ? other.getLocation() == null : this.getLocation().equals(other.getLocation()));
     }
 
     @Override

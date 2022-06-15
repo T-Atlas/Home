@@ -7,12 +7,11 @@ import com.g65.homespring.mapper.LightMapper;
 import org.springframework.stereotype.Service;
 
 /**
- *
  * @author LianJunhong
  */
 @Service
 public class LightServiceImpl extends ServiceImpl<LightMapper, Light>
-    implements LightService{
+        implements LightService {
 
 }
 

@@ -7,12 +7,11 @@ import com.g65.homespring.mapper.SensorMapper;
 import org.springframework.stereotype.Service;
 
 /**
- *
  * @author LianJunhong
  */
 @Service
 public class SensorServiceImpl extends ServiceImpl<SensorMapper, Sensor>
-    implements SensorService{
+        implements SensorService {
 
 }
 

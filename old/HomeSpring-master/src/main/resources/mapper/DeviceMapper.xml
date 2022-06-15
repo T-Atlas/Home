@@ -5,15 +5,16 @@
 <mapper namespace="com.g65.homespring.mapper.DeviceMapper">
 
     <resultMap id="BaseResultMap" type="com.g65.homespring.bean.Device">
-            <id property="deviceid" column="deviceId" jdbcType="INTEGER"/>
-            <result property="rid" column="rId" jdbcType="INTEGER"/>
-            <result property="isConsist" column="is_consist" jdbcType="INTEGER"/>
-            <result property="typeid" column="typeId" jdbcType="INTEGER"/>
-            <result property="location" column="location" jdbcType="VARCHAR"/>
+        <id property="deviceid" column="deviceId" jdbcType="INTEGER"/>
+        <result property="rid" column="rId" jdbcType="INTEGER"/>
+        <result property="isConsist" column="is_consist" jdbcType="INTEGER"/>
+        <result property="typeid" column="typeId" jdbcType="INTEGER"/>
+        <result property="location" column="location" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="Base_Column_List">
-        deviceId,rId,is_consist,
+        deviceId
+        ,rId,is_consist,
         typeId,location
     </sql>
 </mapper>

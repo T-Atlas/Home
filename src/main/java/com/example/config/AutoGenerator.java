@@ -32,17 +32,17 @@ public class AutoGenerator {
     private void generateDates() {
 
         Sensor sensor = sensorMapper.selectByPrimaryKey(1);
-        temperature = sensor.getTemperature() + randomDouble(-5.0,5.0);
-        humidity = sensor.getHumidity() + randomDouble(-10.0,10.0);
+        temperature = sensor.getTemperature() + randomDouble(-5.0, 5.0);
+        humidity = sensor.getHumidity() + randomDouble(-10.0, 10.0);
         if (humidity > 0 && humidity < 100) {
             sensor.setHumidity(humidity);
         } else {
-            sensor.setHumidity(50 + randomDouble(-10.0,10.0));
+            sensor.setHumidity(50 + randomDouble(-10.0, 10.0));
         }
         if (temperature > -20 && temperature < 50) {
             sensor.setTemperature(temperature);
         } else {
-            sensor.setTemperature(20 + randomDouble(-5.0,5.0));
+            sensor.setTemperature(20 + randomDouble(-5.0, 5.0));
         }
 
         sensorMapper.updateByPrimaryKeySelective(sensor);

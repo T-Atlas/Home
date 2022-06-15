@@ -32,13 +32,13 @@ public class InfoEditServlet extends HttpServlet {
 
         resp.setContentType("text/html;charset=utf-8");
         PrintWriter out = resp.getWriter();
-        if(userName==null||userPassword==null||userAge<0||userEmail==null||userTel==null||userRoom<0){
+        if (userName == null || userPassword == null || userAge < 0 || userEmail == null || userTel == null || userRoom < 0) {
             out.println(" <script language='javascript'> alert('Please input right format');location.href='pages/edit.jsp'; </script> ");
             out.close();
-        }else{
+        } else {
             boolean flag = userService.updateInfo(userId, userName, userPassword, userAge, userEmail, userTel, userRoom);
 
-            if(flag) {
+            if (flag) {
                 UserEntity user = new UserEntity();
                 user.setuId(userId);
                 user.setuName(userName);
@@ -48,17 +48,16 @@ public class InfoEditServlet extends HttpServlet {
                 user.setuTelephone(userTel);
                 user.setrId(userRoom);
 
-                HttpSession session=req.getSession();
+                HttpSession session = req.getSession();
                 session.removeAttribute(Constants.USER_SESSION);
-                session.setAttribute(Constants.USER_SESSION,user);
+                session.setAttribute(Constants.USER_SESSION, user);
                 out.println(" <script language='javascript'> alert('Successful!');location.href='pages/user-profile.jsp'; </script> ");
                 out.close();
-            }else{
+            } else {
                 out.println(" <script language='javascript'> alert('Unsuccessful!');location.href='pages/user-profile.jsp'; </script> ");
                 out.close();
             }
         }
-
 
 
     }

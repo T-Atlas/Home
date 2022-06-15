@@ -7,12 +7,11 @@ import com.g65.homespring.mapper.DeviceMapper;
 import org.springframework.stereotype.Service;
 
 /**
- *
  * @author LianJunhong
  */
 @Service
 public class DeviceServiceImpl extends ServiceImpl<DeviceMapper, Device>
-    implements DeviceService{
+        implements DeviceService {
 
 }
 

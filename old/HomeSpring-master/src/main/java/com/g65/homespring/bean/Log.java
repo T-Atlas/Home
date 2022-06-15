@@ -4,24 +4,26 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.util.Date;
+
 import lombok.Data;
 
 /**
- * 
  * @author LianJunhong
  * @TableName log
  */
-@TableName(value ="log")
+@TableName(value = "log")
 @Data
 public class Log implements Serializable {
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
     /**
-     * 
+     *
      */
     @TableId
     private Integer deviceid;
-
     /**
      * 0正常开启
      * 1正常关闭
@@ -29,14 +31,10 @@ public class Log implements Serializable {
      * ＜0入侵
      */
     private Integer state;
-
     /**
-     * 
+     *
      */
     private Date time;
-
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
 
     @Override
     public boolean equals(Object that) {
@@ -51,8 +49,8 @@ public class Log implements Serializable {
         }
         Log other = (Log) that;
         return (this.getDeviceid() == null ? other.getDeviceid() == null : this.getDeviceid().equals(other.getDeviceid()))
-            && (this.getState() == null ? other.getState() == null : this.getState().equals(other.getState()))
-            && (this.getTime() == null ? other.getTime() == null : this.getTime().equals(other.getTime()));
+                && (this.getState() == null ? other.getState() == null : this.getState().equals(other.getState()))
+                && (this.getTime() == null ? other.getTime() == null : this.getTime().equals(other.getTime()));
     }
 
     @Override

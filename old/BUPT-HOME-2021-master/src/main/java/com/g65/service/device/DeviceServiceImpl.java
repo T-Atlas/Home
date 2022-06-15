@@ -11,7 +11,7 @@ import java.util.ArrayList;
 /**
  * @author LianJunhong
  */
-public class DeviceServiceImpl implements DeviceService{
+public class DeviceServiceImpl implements DeviceService {
 
     private DeviceDao deviceDao;
 
@@ -23,18 +23,18 @@ public class DeviceServiceImpl implements DeviceService{
     public int getDeviceCount(int userId) {
         Connection connection = BaseDao.getConnection();
         int count = 0;
-        count=deviceDao.getDeviceCount(connection,userId);
+        count = deviceDao.getDeviceCount(connection, userId);
 
-        BaseDao.closeResource(connection,null,null);
+        BaseDao.closeResource(connection, null, null);
         return count;
     }
 
     @Override
     public ArrayList<DeviceEntity> getExistDevice(int userId) {
         Connection connection = BaseDao.getConnection();
-        ArrayList<DeviceEntity> list = deviceDao.getExistDevice(connection,userId);
+        ArrayList<DeviceEntity> list = deviceDao.getExistDevice(connection, userId);
 
-        BaseDao.closeResource(connection,null,null);
+        BaseDao.closeResource(connection, null, null);
         System.out.println(list.size());
         return list;
     }
