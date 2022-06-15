@@ -7,12 +7,11 @@ import com.g65.homespring.mapper.UserMapper;
 import org.springframework.stereotype.Service;
 
 /**
- *
  * @author LianJunhong
  */
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User>
-    implements UserService{
+        implements UserService {
 
 }
 

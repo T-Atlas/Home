@@ -54,7 +54,7 @@ public class DeviceEntity {
     public void setIsConsist(boolean isConsist) {
         if (isConsist) {
             this.isConsist = 1;
-        }else{
+        } else {
             this.isConsist = 0;
         }
     }

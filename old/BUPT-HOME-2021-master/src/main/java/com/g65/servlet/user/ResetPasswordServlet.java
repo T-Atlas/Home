@@ -20,9 +20,9 @@ public class ResetPasswordServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         String method = req.getParameter("method");
-        if(method !=null && method.equals("forgetPassword")){
+        if (method != null && method.equals("forgetPassword")) {
             this.forgetPassword(req, resp);
-        }else if(method !=null && method.equals("resetPassword")){
+        } else if (method != null && method.equals("resetPassword")) {
             this.forgetPassword(req, resp);
         }
 
@@ -41,24 +41,24 @@ public class ResetPasswordServlet extends HttpServlet {
         //调用service检查信息
         user = userService.informationCheck(userId);
 
-        boolean flag =false;
+        boolean flag = false;
 
-        if(user!=null){
-            if(user.getuName().equals(req.getParameter("user_name"))&&user.getuTelephone().equals(req.getParameter("user_TEL"))){
+        if (user != null) {
+            if (user.getuName().equals(req.getParameter("user_name")) && user.getuTelephone().equals(req.getParameter("user_TEL"))) {
                 String newPassword = req.getParameter("user_nPassword");
-                flag = userService.updatePassword(userId,newPassword);
+                flag = userService.updatePassword(userId, newPassword);
                 resp.setContentType("text/html;charset=utf-8");
                 PrintWriter out = resp.getWriter();
-                if(flag){
+                if (flag) {
                     out.println(" <script language='javascript'> alert('Successful');location.href='login.jsp'; </script> ");
                     out.close();
-                }else{
+                } else {
                     out.println(" <script language='javascript'> alert('Error'); </script> ");
                     out.close();
 
                     req.getRequestDispatcher("login.jsp").forward(req, resp);
                 }
-            }else{
+            } else {
                 resp.setContentType("text/html;charset=utf-8");
                 PrintWriter out = resp.getWriter();
                 out.println(" <script language='javascript'> alert('Information wrong,try again!');location.href='forgot-password.jsp'; </script> ");
@@ -66,7 +66,7 @@ public class ResetPasswordServlet extends HttpServlet {
 
             }
 
-        }else{
+        } else {
             resp.setContentType("text/html;charset=utf-8");
             PrintWriter out = resp.getWriter();
             out.println(" <script language='javascript'> alert('Information wrong,try again!');location.href='forgot-password.jsp'; </script> ");
@@ -84,25 +84,25 @@ public class ResetPasswordServlet extends HttpServlet {
         //调用service检查信息
         user = userService.informationCheck(userId);
 
-        boolean flag =false;
+        boolean flag = false;
 
-        if(user!=null){
+        if (user != null) {
             String newPassword = req.getParameter("user_nPassword");
             String rnewPassword = req.getParameter("user_rnPassword");
-            if(user.getuPassword().equals(req.getParameter("user_oldPassword"))&&newPassword.equals(req.getParameter(rnewPassword))){
-                flag = userService.updatePassword(userId,newPassword);
+            if (user.getuPassword().equals(req.getParameter("user_oldPassword")) && newPassword.equals(req.getParameter(rnewPassword))) {
+                flag = userService.updatePassword(userId, newPassword);
                 resp.setContentType("text/html;charset=utf-8");
                 PrintWriter out = resp.getWriter();
-                if(flag){
+                if (flag) {
                     out.println(" <script language='javascript'> alert('Successful');location.href='login.jsp'; </script> ");
                     out.close();
-                }else{
+                } else {
                     out.println(" <script language='javascript'> alert('Error'); </script> ");
                     out.close();
 
                     req.getRequestDispatcher("login.jsp").forward(req, resp);
                 }
-            }else{
+            } else {
                 resp.setContentType("text/html;charset=utf-8");
                 PrintWriter out = resp.getWriter();
                 out.println(" <script language='javascript'> alert('Information wrong,try again!');location.href='forgot-password.jsp'; </script> ");
@@ -110,7 +110,7 @@ public class ResetPasswordServlet extends HttpServlet {
 
             }
 
-        }else{
+        } else {
             resp.setContentType("text/html;charset=utf-8");
             PrintWriter out = resp.getWriter();
             out.println(" <script language='javascript'> alert('Information wrong,try again!');location.href='forgot-password.jsp'; </script> ");

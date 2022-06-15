@@ -4,50 +4,45 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
+
 import lombok.Data;
 
 /**
- * 
  * @author LianJunhong
  * @TableName light
  */
-@TableName(value ="light")
+@TableName(value = "light")
 @Data
 public class Light implements Serializable {
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
     /**
-     * 
+     *
      */
     @TableId
     private Integer deviceid;
-
     /**
      * 0开启，1关闭
      */
     private Integer isClose;
-
     /**
-     * 
+     *
      */
     private Integer b;
-
     /**
-     * 
+     *
      */
     private Integer g;
-
     /**
-     * 
+     *
      */
     private Integer r;
-
     /**
-     * 
+     *
      */
     private Integer level;
-
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
 
     @Override
     public boolean equals(Object that) {
@@ -62,11 +57,11 @@ public class Light implements Serializable {
         }
         Light other = (Light) that;
         return (this.getDeviceid() == null ? other.getDeviceid() == null : this.getDeviceid().equals(other.getDeviceid()))
-            && (this.getIsClose() == null ? other.getIsClose() == null : this.getIsClose().equals(other.getIsClose()))
-            && (this.getB() == null ? other.getB() == null : this.getB().equals(other.getB()))
-            && (this.getG() == null ? other.getG() == null : this.getG().equals(other.getG()))
-            && (this.getR() == null ? other.getR() == null : this.getR().equals(other.getR()))
-            && (this.getLevel() == null ? other.getLevel() == null : this.getLevel().equals(other.getLevel()));
+                && (this.getIsClose() == null ? other.getIsClose() == null : this.getIsClose().equals(other.getIsClose()))
+                && (this.getB() == null ? other.getB() == null : this.getB().equals(other.getB()))
+                && (this.getG() == null ? other.getG() == null : this.getG().equals(other.getG()))
+                && (this.getR() == null ? other.getR() == null : this.getR().equals(other.getR()))
+                && (this.getLevel() == null ? other.getLevel() == null : this.getLevel().equals(other.getLevel()));
     }
 
     @Override

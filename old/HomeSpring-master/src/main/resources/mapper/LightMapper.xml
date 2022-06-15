@@ -5,16 +5,17 @@
 <mapper namespace="com.g65.homespring.mapper.LightMapper">
 
     <resultMap id="BaseResultMap" type="com.g65.homespring.bean.Light">
-            <id property="deviceid" column="deviceId" jdbcType="INTEGER"/>
-            <result property="isClose" column="is_close" jdbcType="INTEGER"/>
-            <result property="b" column="B" jdbcType="INTEGER"/>
-            <result property="g" column="G" jdbcType="INTEGER"/>
-            <result property="r" column="R" jdbcType="INTEGER"/>
-            <result property="level" column="level" jdbcType="INTEGER"/>
+        <id property="deviceid" column="deviceId" jdbcType="INTEGER"/>
+        <result property="isClose" column="is_close" jdbcType="INTEGER"/>
+        <result property="b" column="B" jdbcType="INTEGER"/>
+        <result property="g" column="G" jdbcType="INTEGER"/>
+        <result property="r" column="R" jdbcType="INTEGER"/>
+        <result property="level" column="level" jdbcType="INTEGER"/>
     </resultMap>
 
     <sql id="Base_Column_List">
-        deviceId,is_close,B,
+        deviceId
+        ,is_close,B,
         G,R,level
     </sql>
 </mapper>

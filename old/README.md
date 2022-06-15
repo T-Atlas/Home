@@ -1,0 +1,1 @@
+# This folder is for pre-project and mid-project files, and is now deprecated.

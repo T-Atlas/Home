@@ -4,55 +4,51 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
+
 import lombok.Data;
 
 /**
  * 存储用户信息
+ *
  * @author LianJunhong
  * @TableName user
  */
-@TableName(value ="user")
+@TableName(value = "user")
 @Data
 public class User implements Serializable {
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
     /**
-     * 
+     *
      */
     @TableId
     private Integer uid;
-
     /**
      * room id
      */
     private Integer rid;
-
     /**
-     * 
+     *
      */
     private String utel;
-
     /**
-     * 
+     *
      */
     private String uemail;
-
     /**
-     * 
+     *
      */
     private Integer uage;
-
     /**
-     * 
+     *
      */
     private String uname;
-
     /**
-     * 
+     *
      */
     private String upassword;
-
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
 
     @Override
     public boolean equals(Object that) {
@@ -67,12 +63,12 @@ public class User implements Serializable {
         }
         User other = (User) that;
         return (this.getUid() == null ? other.getUid() == null : this.getUid().equals(other.getUid()))
-            && (this.getRid() == null ? other.getRid() == null : this.getRid().equals(other.getRid()))
-            && (this.getUtel() == null ? other.getUtel() == null : this.getUtel().equals(other.getUtel()))
-            && (this.getUemail() == null ? other.getUemail() == null : this.getUemail().equals(other.getUemail()))
-            && (this.getUage() == null ? other.getUage() == null : this.getUage().equals(other.getUage()))
-            && (this.getUname() == null ? other.getUname() == null : this.getUname().equals(other.getUname()))
-            && (this.getUpassword() == null ? other.getUpassword() == null : this.getUpassword().equals(other.getUpassword()));
+                && (this.getRid() == null ? other.getRid() == null : this.getRid().equals(other.getRid()))
+                && (this.getUtel() == null ? other.getUtel() == null : this.getUtel().equals(other.getUtel()))
+                && (this.getUemail() == null ? other.getUemail() == null : this.getUemail().equals(other.getUemail()))
+                && (this.getUage() == null ? other.getUage() == null : this.getUage().equals(other.getUage()))
+                && (this.getUname() == null ? other.getUname() == null : this.getUname().equals(other.getUname()))
+                && (this.getUpassword() == null ? other.getUpassword() == null : this.getUpassword().equals(other.getUpassword()));
     }
 
     @Override

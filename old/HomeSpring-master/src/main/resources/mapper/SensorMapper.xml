@@ -5,12 +5,13 @@
 <mapper namespace="com.g65.homespring.mapper.SensorMapper">
 
     <resultMap id="BaseResultMap" type="com.g65.homespring.bean.Sensor">
-            <id property="deviceid" column="deviceId" jdbcType="INTEGER"/>
-            <result property="humidity" column="humidity" jdbcType="DOUBLE"/>
-            <result property="temperature" column="temperature" jdbcType="DOUBLE"/>
+        <id property="deviceid" column="deviceId" jdbcType="INTEGER"/>
+        <result property="humidity" column="humidity" jdbcType="DOUBLE"/>
+        <result property="temperature" column="temperature" jdbcType="DOUBLE"/>
     </resultMap>
 
     <sql id="Base_Column_List">
-        deviceId,humidity,temperature
+        deviceId
+        ,humidity,temperature
     </sql>
 </mapper>

@@ -22,8 +22,8 @@ public class DeviceTableServlet extends HttpServlet {
 
         DeviceService deviceService = new DeviceServiceImpl();
         ArrayList<DeviceEntity> list = deviceService.getExistDevice(userId);
-        if(!list.isEmpty()){
-            HttpSession session=req.getSession();
+        if (!list.isEmpty()) {
+            HttpSession session = req.getSession();
             session.setAttribute("list", list);
         }
     }

@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * @author LianJunhong
  */
 public interface DeviceDao {
-    public int getDeviceCount(Connection connection,int userId);
+    public int getDeviceCount(Connection connection, int userId);
 
     public ArrayList<DeviceEntity> getExistDevice(Connection connection, int userId);
 }

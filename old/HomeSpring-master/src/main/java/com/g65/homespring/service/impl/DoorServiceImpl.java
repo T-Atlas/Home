@@ -7,12 +7,11 @@ import com.g65.homespring.mapper.DoorMapper;
 import org.springframework.stereotype.Service;
 
 /**
- *
  * @author LianJunhong
  */
 @Service
 public class DoorServiceImpl extends ServiceImpl<DoorMapper, Door>
-    implements DoorService{
+        implements DoorService {
 
 }
 

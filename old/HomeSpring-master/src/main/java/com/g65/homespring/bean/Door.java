@@ -4,37 +4,35 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
+
 import lombok.Data;
 
 /**
- * 
  * @author LianJunhong
  * @TableName door
  */
-@TableName(value ="door")
+@TableName(value = "door")
 @Data
 public class Door implements Serializable {
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
     /**
-     * 
+     *
      */
     @TableId
     private Integer deviceid;
-
     /**
      * 0上锁
      * 1解锁
      */
     private Integer isLock;
-
     /**
      * 0开启
      * 1关闭
      */
     private Integer isClose;
-
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
 
     @Override
     public boolean equals(Object that) {
@@ -49,8 +47,8 @@ public class Door implements Serializable {
         }
         Door other = (Door) that;
         return (this.getDeviceid() == null ? other.getDeviceid() == null : this.getDeviceid().equals(other.getDeviceid()))
-            && (this.getIsLock() == null ? other.getIsLock() == null : this.getIsLock().equals(other.getIsLock()))
-            && (this.getIsClose() == null ? other.getIsClose() == null : this.getIsClose().equals(other.getIsClose()));
+                && (this.getIsLock() == null ? other.getIsLock() == null : this.getIsLock().equals(other.getIsLock()))
+                && (this.getIsClose() == null ? other.getIsClose() == null : this.getIsClose().equals(other.getIsClose()));
     }
 
     @Override
